@@ -1,0 +1,109 @@
+/* Importando a fonte personalizada */
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('Canopee.otf') format('woff2');
+    font-weight: normal; /* Define o peso padrão */
+    font-style: normal;  /* Define o estilo padrão */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'MinhaFonte', sans-serif;
+    color: #ffa200; /* Cor amarela */
+    overflow-x: hidden; /* Remove barra de rolagem */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Para navegadores baseados em Webkit (Chrome, Edge, Safari) */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100vw; /* Largura exata da viewport */
+    height: 100vh; /* Altura exata da viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ajuste da Imagem */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Garante que a imagem tenha a mesma largura da viewport */
+    height: 100vh; /* Garante que a imagem tenha a mesma altura da viewport */
+    object-fit: cover; /* Faz a imagem cobrir todo o espaço sem deformar */
+    z-index: -1; /* Move a imagem para trás */
+}
+
+/* Barra superior */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    z-index: 1;
+}
+
+.logo, .menu {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Conteúdo central */
+.center-content {
+    text-align: center;
+    margin: auto;
+    z-index: 1;
+}
+
+.center-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.center-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+/* Estilo para a galeria de imagens */
+.image-gallery {
+    display: flex;
+    flex-direction: column; /* Coloca as imagens uma abaixo da outra */
+    align-items: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Espaço entre as imagens */
+    padding: 20px 0; /* Espaço ao redor da galeria */
+    background-color: #f4f4f4; /* Fundo claro para destacar as imagens */
+}
+
+.gallery-image {
+    width: 90%; /* Imagens ocupam 90% da largura da tela */
+    max-width: 800px; /* Limita a largura máxima */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .center-content h1 {
+        font-size: 3rem;
+    }
+
+    .center-content p {
+        font-size: 0.9rem;
+    }
+}
